@@ -15,7 +15,7 @@ const Details= (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/pirate/${id}`)
+      .get(`http://localhost:8000/api/pirate/${id}`)
       .then((res) => {
         console.log(res);
         setPirate(res.data);
@@ -27,7 +27,7 @@ const Details= (props) => {
   }, []);
   const handleClick= (changes)=>{
     console.log(pirate)
-    axios.patch('http://localhost:8000/pirate/' + id, {
+    axios.patch('http://localhost:8000/api/pirate/' + id, {
        
         ...pirate,...changes
             

@@ -1,11 +1,11 @@
 const PirateController = require("../controllers/pirate.controller");
 
 module.exports = (app) => {
-  app.post("/pirate", PirateController.createPirate);
-  app.get("/pirate", PirateController.getAllPirates);
-  app.get("/pirate/:id", PirateController.getPirate);
-  app.patch("/pirate/:id", PirateController.updatePirate);
-  app.delete("/pirate/:id", PirateController.deletePirate);
+  app.post("/api/pirate", PirateController.createPirate);
+  app.get("/api/pirate", PirateController.getAllPirates);
+  app.get("/api/pirate/:id", PirateController.getPirate);
+  app.patch("/api/pirate/:id", PirateController.updatePirate);
+  app.delete("/api/pirate/:id", PirateController.deletePirate);
 
  
 };

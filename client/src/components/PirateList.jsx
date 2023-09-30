@@ -14,7 +14,7 @@ const PirateList=(props)=>{
     const [sortOrder, setSortOrder] = useState("asc");
 
     useEffect(()=>{
-        axios.get("http://localhost:8000/pirate")
+        axios.get("http://localhost:8000/api/pirate")
         .then((res)=>{
        
         const sortedPirates = res.data.slice(); 
@@ -31,7 +31,7 @@ const PirateList=(props)=>{
   }, [updated, sortOrder]);
 
     const deletePirate=(id) =>{
-        axios.delete(`http://localhost:8000/pirate/${id}`)
+        axios.delete(`http://localhost:8000/api/pirate/${id}`)
         .then( res => {
          
             console.log(res.data);

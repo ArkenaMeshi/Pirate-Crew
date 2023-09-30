@@ -20,7 +20,7 @@ const CreatePirate=(props)=>{
         e.preventDefault();
 
         axios
-        .post("http://localhost:8000/pirate",{
+        .post("http://localhost:8000/api/pirate",{
         name:name,
         image:image,
         treasure:treasure,
